@@ -1,0 +1,152 @@
+/* Start Global Rules */
+     *{
+          box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          padding:0;
+          margin:0;
+     }
+     .container{
+          padding-right:15px;
+          padding-left:15px;
+          margin-left:5px;
+          margin-right:5px;
+     }
+     body{
+          background-color: hsl(257, 40%, 49%);
+          font-family: 'Poppins', sans-serif;
+          background-image: url('../images/bg-desktop.svg');
+          background-size: cover;
+          background-repeat: no-repeat;
+     }
+/* End Global Rules */
+
+
+     /*  Start Header */
+     header .logo img{
+          padding:26px;
+     }
+     /*  Start Header */
+
+     /*  Start Main  */
+     main {
+          display: grid;
+          /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+          grid-template-areas: "bg-image bg-text";
+          /* display: flex; */
+          gap: 50px;
+          margin:50px;
+     }
+     @media(max-width:767px){
+          main{
+               grid-template-areas: 
+               "bg-image bg-image"
+               "bg-text bg-text"
+          }
+     }
+     main .bg-image{
+          grid-area: bg-image;
+     }
+     @media(max-width:767px){
+          main .bg-image img{
+               width:100%;
+          }
+     }
+
+     main .bg-text {
+          grid-area: bg-text;
+          margin:45px 0;
+     }
+     @media(max-width:767px){
+          main .bg-text{
+               text-align: center;
+          }
+     }
+     main .bg-text h1{
+          font-family: 'Poppins', sans-serif;
+          margin-top: 15px;
+          margin-bottom: 24px;
+          font-size: 35px;
+          color: #fff;
+     }
+     @media(max-width:767px){
+          main .bg-text h1{
+               font-size: 27px;
+          }
+     }
+     main .bg-text p{
+          font-family: 'Poppins', sans-serif;
+          line-height: 1.7;
+          color: hsl(300deg 57% 84%);
+     }
+        @media(max-width:767px){
+          main .bg-text p{
+               font-size:11px;
+               line-height: 1.9;
+               text-align: center;
+          }
+        }
+     main .btn{
+          margin:14px 0;
+     }
+     main .btn button{
+          border: none;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-right: 70px;
+          padding-left: 70px;
+          border-radius: 30px;
+          color:hsl(300deg 62% 71%);
+     }
+     @media(max-width:767px){
+          main .btn button{
+               margin-top:16px;
+               margin-bottom:15px;;
+          }
+     }
+     /*  End  Main  */
+/*   Start Media */
+     footer .media{
+          position: absolute;
+          content: "";
+          right:57px;
+          bottom: 45px;
+     }
+     @media(max-width:767px){
+          footer .media{
+               text-align: center;
+               padding-bottom: 10px;
+               margin: 30px;
+               position: initial;
+          }
+     }
+     footer .media .fab{
+
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-right: 13px;
+          padding-left: 13px;
+          border: 1px solid #fff;
+          border-radius: 50%;
+          color: hsl(300deg 57% 84%);;
+     }
+/*   End Media */
+/*  Start Media Queries */
+     @media(min-width:768px){
+          .container{
+               max-width:720px;
+          }
+     }
+
+     @media(min-width:992px){
+          .container{
+               max-width:960px;
+          }
+     }
+
+     @media(min-width:1440px){
+          .container{
+               max-width:1400px
+          }
+     }
+/*  End Media Queries */
